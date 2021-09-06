@@ -1,0 +1,463 @@
+    Updating crates.io index
+  Installing sqlx-cli v0.5.5
+   Compiling version_check v0.9.3
+   Compiling libc v0.2.101
+   Compiling autocfg v1.0.1
+   Compiling proc-macro2 v1.0.29
+   Compiling unicode-xid v0.2.2
+   Compiling syn v1.0.75
+   Compiling memchr v2.4.1
+   Compiling futures-core v0.3.17
+   Compiling cfg-if v1.0.0
+   Compiling log v0.4.14
+   Compiling typenum v1.14.0
+   Compiling cc v1.0.70
+   Compiling pkg-config v0.3.19
+   Compiling crossbeam-utils v0.8.5
+   Compiling once_cell v1.8.0
+   Compiling signal-hook v0.3.10
+   Compiling pin-project-lite v0.2.7
+   Compiling futures-io v0.3.17
+   Compiling openssl v0.10.36
+   Compiling proc-macro-nested v0.1.7
+   Compiling futures-task v0.3.17
+   Compiling futures-channel v0.3.17
+   Compiling slab v0.4.4
+   Compiling proc-macro-hack v0.5.19
+   Compiling cache-padded v1.1.1
+   Compiling lazy_static v1.4.0
+   Compiling parking_lot_core v0.8.5
+   Compiling minimal-lexical v0.1.2
+   Compiling waker-fn v1.1.0
+   Compiling event-listener v2.5.1
+   Compiling native-tls v0.2.8
+   Compiling parking v2.0.0
+   Compiling serde v1.0.130
+   Compiling fastrand v1.5.0
+   Compiling serde_derive v1.0.130
+   Compiling ryu v1.0.5
+   Compiling tinyvec_macros v0.1.0
+   Compiling async-task v4.0.3
+   Compiling pin-utils v0.1.0
+   Compiling atomic-waker v1.0.0
+   Compiling crossbeam-queue v0.3.2
+   Compiling serde_json v1.0.67
+   Compiling unicode-bidi v0.3.6
+   Compiling matches v0.1.9
+   Compiling whoami v1.1.3
+   Compiling foreign-types-shared v0.1.1
+   Compiling bitflags v1.3.2
+   Compiling percent-encoding v2.1.0
+   Compiling futures-sink v0.3.17
+   Compiling ppv-lite86 v0.2.10
+   Compiling smallvec v1.6.1
+   Compiling regex-syntax v0.6.25
+   Compiling openssl-probe v0.1.4
+   Compiling opaque-debug v0.3.0
+   Compiling scopeguard v1.1.0
+   Compiling unicode-segmentation v1.8.0
+   Compiling cpufeatures v0.2.1
+   Compiling subtle v2.4.1
+   Compiling unicode-width v0.1.8
+   Compiling unicode_categories v0.1.1
+   Compiling crc-catalog v1.1.1
+   Compiling maplit v1.0.2
+   Compiling itoa v0.4.8
+   Compiling hex v0.4.3
+   Compiling byteorder v1.4.3
+   Compiling base64 v0.13.0
+   Compiling bytes v1.1.0
+   Compiling async-trait v0.1.51
+   Compiling remove_dir_all v0.5.3
+   Compiling anyhow v1.0.43
+   Compiling dotenv v0.15.0
+   Compiling termcolor v1.1.2
+   Compiling vec_map v0.8.2
+   Compiling os_str_bytes v2.4.0
+   Compiling zeroize v1.4.1
+   Compiling strsim v0.10.0
+   Compiling glob v0.3.0
+   Compiling instant v0.1.10
+   Compiling value-bag v1.0.0-alpha.7
+   Compiling generic-array v0.14.4
+   Compiling ahash v0.7.4
+   Compiling nom v7.0.0
+   Compiling proc-macro-error-attr v1.0.4
+   Compiling proc-macro-error v1.0.4
+   Compiling num-traits v0.2.14
+   Compiling futures-util v0.3.17
+   Compiling futures-macro v0.3.17
+   Compiling indexmap v1.7.0
+   Compiling num-integer v0.1.44
+   Compiling tokio v1.11.0
+   Compiling concurrent-queue v1.2.2
+   Compiling async-mutex v1.4.0
+   Compiling async-lock v2.4.0
+   Compiling tinyvec v1.3.1
+   Compiling openssl-sys v0.9.66
+   Compiling foreign-types v0.3.2
+   Compiling form_urlencoded v1.0.1
+   Compiling lock_api v0.4.5
+   Compiling heck v0.3.3
+   Compiling textwrap v0.12.1
+   Compiling crc v2.0.0
+   Compiling unicode-normalization v0.1.19
+   Compiling async-channel v1.6.1
+   Compiling futures-lite v1.12.0
+   Compiling aho-corasick v0.7.18
+   Compiling quote v1.0.9
+   Compiling getrandom v0.2.3
+   Compiling socket2 v0.4.1
+   Compiling signal-hook-registry v1.4.0
+   Compiling num_cpus v1.13.0
+   Compiling dirs-sys v0.3.6
+   Compiling terminal_size v0.1.17
+   Compiling time v0.1.43
+   Compiling atty v0.2.14
+   Compiling remove_dir_all v0.7.0
+   Compiling crossbeam-channel v0.5.1
+   Compiling idna v0.2.3
+   Compiling stringprep v0.1.2
+   Compiling regex v1.5.4
+   Compiling blocking v1.0.2
+   Compiling async-executor v1.4.1
+   Compiling rand_core v0.6.3
+   Compiling dirs v3.0.2
+   Compiling parking_lot v0.11.2
+   Compiling digest v0.9.0
+   Compiling block-buffer v0.9.0
+   Compiling crypto-mac v0.10.1
+   Compiling atoi v0.4.0
+   Compiling url v2.2.2
+   Compiling console v0.14.1
+   Compiling sqlformat v0.1.7
+   Compiling hashbrown v0.11.2
+   Compiling rand_chacha v0.3.1
+   Compiling futures-intrusive v0.4.0
+   Compiling sha-1 v0.9.8
+   Compiling md-5 v0.9.1
+   Compiling sha2 v0.9.6
+   Compiling hmac v0.10.1
+   Compiling chrono v0.4.19
+   Compiling hashlink v0.7.0
+   Compiling rand v0.8.4
+   Compiling ctor v0.1.21
+   Compiling thiserror-impl v1.0.28
+   Compiling tokio-macros v1.3.0
+   Compiling clap_derive v3.0.0-beta.4
+   Compiling tempfile v3.2.0
+   Compiling thiserror v1.0.28
+   Compiling dialoguer v0.8.0
+   Compiling polling v2.1.0
+   Compiling kv-log-macro v1.0.7
+   Compiling clap v3.0.0-beta.2
+   Compiling async-io v1.6.0
+   Compiling futures-executor v0.3.17
+   Compiling async-global-executor v2.0.2
+   Compiling async-process v1.2.0
+   Compiling futures v0.3.17
+   Compiling async-std v1.10.0
+   Compiling either v1.6.1
+   Compiling async-native-tls v0.3.3
+   Compiling sqlx-rt v0.5.7
+   Compiling sqlx-core v0.5.7
+   Compiling sqlx-macros v0.5.7
+   Compiling sqlx v0.5.7
+   Compiling sqlx-cli v0.5.5
+error[E0433]: failed to resolve: could not find `Args` in `clap`
+ --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:3:10
+  |
+3 | #[derive(Clap, Debug)]
+  |          ^^^^ could not find `Args` in `clap`
+  |
+  = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `into_app_for_update` is not a member of trait `clap::IntoApp`
+ --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:3:10
+  |
+3 | #[derive(Clap, Debug)]
+  |          ^^^^ not a member of trait `clap::IntoApp`
+  |
+  = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `update_from_arg_matches` is not a member of trait `clap::FromArgMatches`
+ --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:3:10
+  |
+3 | #[derive(Clap, Debug)]
+  |          ^^^^ not a member of trait `clap::FromArgMatches`
+  |
+  = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `into_app_for_update` is not a member of trait `clap::IntoApp`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:12:10
+   |
+12 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::IntoApp`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `update_from_arg_matches` is not a member of trait `clap::FromArgMatches`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:12:10
+   |
+12 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::FromArgMatches`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0433]: failed to resolve: could not find `Args` in `clap`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:15:14
+   |
+15 |     Database(DatabaseOpt),
+   |              ^^^^^^^^^^^ could not find `Args` in `clap`
+
+error[E0433]: failed to resolve: could not find `Args` in `clap`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:42:13
+   |
+42 |     Migrate(MigrateOpt),
+   |             ^^^^^^^^^^ could not find `Args` in `clap`
+
+error[E0407]: method `augment_subcommands_for_update` is not a member of trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:12:10
+   |
+12 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `has_subcommand` is not a member of trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:12:10
+   |
+12 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0433]: failed to resolve: could not find `Args` in `clap`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:46:10
+   |
+46 | #[derive(Clap, Debug)]
+   |          ^^^^ could not find `Args` in `clap`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `into_app_for_update` is not a member of trait `clap::IntoApp`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:46:10
+   |
+46 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::IntoApp`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `update_from_arg_matches` is not a member of trait `clap::FromArgMatches`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:46:10
+   |
+46 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::FromArgMatches`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `into_app_for_update` is not a member of trait `clap::IntoApp`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:52:10
+   |
+52 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::IntoApp`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `update_from_arg_matches` is not a member of trait `clap::FromArgMatches`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:52:10
+   |
+52 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::FromArgMatches`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `augment_subcommands_for_update` is not a member of trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:52:10
+   |
+52 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `has_subcommand` is not a member of trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:52:10
+   |
+52 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0433]: failed to resolve: could not find `Args` in `clap`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:86:10
+   |
+86 | #[derive(Clap, Debug)]
+   |          ^^^^ could not find `Args` in `clap`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `into_app_for_update` is not a member of trait `clap::IntoApp`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:86:10
+   |
+86 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::IntoApp`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `update_from_arg_matches` is not a member of trait `clap::FromArgMatches`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:86:10
+   |
+86 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::FromArgMatches`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `into_app_for_update` is not a member of trait `clap::IntoApp`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:96:10
+   |
+96 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::IntoApp`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `update_from_arg_matches` is not a member of trait `clap::FromArgMatches`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:96:10
+   |
+96 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::FromArgMatches`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `augment_subcommands_for_update` is not a member of trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:96:10
+   |
+96 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0407]: method `has_subcommand` is not a member of trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:96:10
+   |
+96 | #[derive(Clap, Debug)]
+   |          ^^^^ not a member of trait `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `update_from_arg_matches` in trait `clap::FromArgMatches`
+   --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:6:18
+    |
+6   |     pub command: Command,
+    |                  ^^^^^^^ help: an associated function with a similar name exists: `from_arg_matches`
+    | 
+   ::: /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/clap-3.0.0-beta.2/src/derive.rs:156:5
+    |
+156 |     fn from_arg_matches(matches: &ArgMatches) -> Self;
+    |     -------------------------------------------------- similarly named associated function `from_arg_matches` defined here
+
+error[E0404]: expected trait, found derive macro `clap::Args`
+ --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:3:10
+  |
+3 | #[derive(Clap, Debug)]
+  |          ^^^^ not a trait
+  |
+  = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `augment_subcommands_for_update` in trait `clap::Subcommand`
+ --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:3:10
+  |
+3 | #[derive(Clap, Debug)]
+  |          ^^^^ not found in `clap::Subcommand`
+  |
+  = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `augment_subcommands_for_update` in trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:12:10
+   |
+12 | #[derive(Clap, Debug)]
+   |          ^^^^ not found in `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `update_from_arg_matches` in trait `clap::FromArgMatches`
+   --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:49:18
+    |
+49  |     pub command: DatabaseCommand,
+    |                  ^^^^^^^^^^^^^^^ help: an associated function with a similar name exists: `from_arg_matches`
+    | 
+   ::: /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/clap-3.0.0-beta.2/src/derive.rs:156:5
+    |
+156 |     fn from_arg_matches(matches: &ArgMatches) -> Self;
+    |     -------------------------------------------------- similarly named associated function `from_arg_matches` defined here
+
+error[E0404]: expected trait, found derive macro `clap::Args`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:46:10
+   |
+46 | #[derive(Clap, Debug)]
+   |          ^^^^ not a trait
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `augment_subcommands_for_update` in trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:46:10
+   |
+46 | #[derive(Clap, Debug)]
+   |          ^^^^ not found in `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `augment_subcommands_for_update` in trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:52:10
+   |
+52 | #[derive(Clap, Debug)]
+   |          ^^^^ not found in `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `update_from_arg_matches` in trait `clap::FromArgMatches`
+   --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:93:18
+    |
+93  |     pub command: MigrateCommand,
+    |                  ^^^^^^^^^^^^^^ help: an associated function with a similar name exists: `from_arg_matches`
+    | 
+   ::: /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/clap-3.0.0-beta.2/src/derive.rs:156:5
+    |
+156 |     fn from_arg_matches(matches: &ArgMatches) -> Self;
+    |     -------------------------------------------------- similarly named associated function `from_arg_matches` defined here
+
+error[E0404]: expected trait, found derive macro `clap::Args`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:86:10
+   |
+86 | #[derive(Clap, Debug)]
+   |          ^^^^ not a trait
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `augment_subcommands_for_update` in trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:86:10
+   |
+86 | #[derive(Clap, Debug)]
+   |          ^^^^ not found in `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0576]: cannot find method or associated constant `augment_subcommands_for_update` in trait `clap::Subcommand`
+  --> /home/chris/.cargo/registry/src/github.com-1ecc6299db9ec823/sqlx-cli-0.5.5/src/opt.rs:96:10
+   |
+96 | #[derive(Clap, Debug)]
+   |          ^^^^ not found in `clap::Subcommand`
+   |
+   = note: this error originates in the derive macro `Clap` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: aborting due to 35 previous errors
+
+Some errors have detailed explanations: E0404, E0407, E0433, E0576.
+For more information about an error, try `rustc --explain E0404`.
+error: could not compile `sqlx-cli`
+
+To learn more, run the command again with --verbose.
+warning: build failed, waiting for other jobs to finish...
+error: failed to compile `sqlx-cli v0.5.5`, intermediate artifacts can be found at `/tmp/cargo-installgutwE1`
+
+Caused by:
+  build failed
