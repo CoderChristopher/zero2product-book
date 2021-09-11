@@ -2,6 +2,7 @@
 pub struct Settings {
     pub database: DatabaseSettings,
     pub application_port: u16,
+	pub application_ip: String,
 }
 
 #[derive(serde::Deserialize)]

@@ -1,24 +1,24 @@
-use sqlx::{Connection, Executor, PgConnection, PgPool};
-use std::net::TcpListener;
-use std::net::SocketAddr;
-use std::net::Ipv4Addr;
-use uuid::Uuid;
 use once_cell::sync::Lazy;
+use sqlx::{Connection, Executor, PgConnection, PgPool};
+use std::net::Ipv4Addr;
+use std::net::SocketAddr;
+use std::net::TcpListener;
+use uuid::Uuid;
 
 use zero2prod::configuration::*;
 use zero2prod::startup::run;
 use zero2prod::telemetry::{get_subscriber, init_subscriber};
 
 static TRACING: Lazy<()> = Lazy::new(|| {
-	let default_filter_level = "debug".into();
-	let subscriber_name = "test".into();
-	if std::env::var("TEST_LOG").is_ok() {
-		let subscriber = get_subscriber(subscriber_name,default_filter_level, std::io::stdout);
-		init_subscriber(subscriber);
-	}else{
-		let subscriber = get_subscriber(subscriber_name,default_filter_level, std::io::sink);
-		init_subscriber(subscriber);
-	}
+    let default_filter_level = "debug".into();
+    let subscriber_name = "test".into();
+    if std::env::var("TEST_LOG").is_ok() {
+        let subscriber = get_subscriber(subscriber_name, default_filter_level, std::io::stdout);
+        init_subscriber(subscriber);
+    } else {
+        let subscriber = get_subscriber(subscriber_name, default_filter_level, std::io::sink);
+        init_subscriber(subscriber);
+    }
 });
 
 pub struct TestApp {
@@ -27,28 +27,28 @@ pub struct TestApp {
 }
 
 fn parse_ipv4_addr(address: Ipv4Addr) -> String {
-	let octets = address.octets();
-	format!("{}.{}.{}.{}",octets[0],octets[1],octets[2],octets[3])
+    let octets = address.octets();
+    format!("{}.{}.{}.{}", octets[0], octets[1], octets[2], octets[3])
 }
 
 async fn spawn_app() -> TestApp {
-	Lazy::force(&TRACING);
-
-    let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind a random port.");
-	let listener_address = listener.local_addr().unwrap();
-    let port = listener_address.port();
-	let address = match listener_address {
-			SocketAddr::V4(ip) => {
-				format!("http://{}:{}",parse_ipv4_addr(*ip.ip()), port)
-
-			},
-			SocketAddr::V6(_) => {
-				panic!("Expecting an ipv4 address and recieved a ipv6 address");
-				String::from("")
-			}
-	};
-
+    Lazy::force(&TRACING);
     let mut configuration = get_configuration().expect("Failed to read configuration.");
+	let address = format!("{}:0",configuration.application_ip);
+
+    let listener = TcpListener::bind(address).expect("Failed to bind a random port.");
+    let listener_address = listener.local_addr().unwrap();
+    let port = listener_address.port();
+    let address = match listener_address {
+        SocketAddr::V4(ip) => {
+            format!("http://{}:{}", parse_ipv4_addr(*ip.ip()), port)
+        }
+        SocketAddr::V6(_) => {
+            panic!("Expecting an ipv4 address and recieved a ipv6 address");
+            String::from("")
+        }
+    };
+
     configuration.database.database_name = Uuid::new_v4().to_string();
     let connection_pool = configure_database(&configuration.database).await;
 
@@ -116,6 +116,35 @@ async fn subscribe_returns_a_200_for_valid_form_data() {
     assert_eq!(saved.name, "Chris Copeland");
 }
 #[actix_rt::test]
+async fn subscribe_returns_a_400_when_fields_are_present_but_empty() {
+	let app_address = spawn_app().await;
+	let client = reqwest::Client::new();
+	let body = "name=&email";
+
+	let test_cases = vec![
+		("name=testing&email=","Name but no email"),
+		("name=&email=email%40123.com","Email but no name"),
+		("name=testing&email=this-is-not-an-email","Invalid Email"),
+	];
+
+	for (body,description) in test_cases {
+			let response = client
+				.post(&format!("{}/subscribe",&app_address.address))
+				.header("Content-Type","application/x-www-form-urlencoded")
+				.body(body)
+				.send()
+				.await
+				.expect("Failed to execute request");
+			
+			assert_eq!(
+				400,
+				response.status().as_u16(),
+				"The API did not return a 400 when the payload was {}.",
+				description
+			);
+	}
+}
+#[actix_rt::test]
 async fn subscribe_returns_a_400_when_data_is_missing() {
     let app_address = spawn_app().await;
     let mut test_cases = vec![
@@ -144,7 +173,6 @@ async fn subscribe_returns_a_400_when_data_is_missing() {
         } else {
             pass_all = false;
         }
-
     }
     if pass_all {
         let mut passed = String::new();

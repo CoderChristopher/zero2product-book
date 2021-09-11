@@ -362,6 +362,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "claim"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f81099d6bb72e1df6d50bb2347224b666a670912bb7f06dbe867a4a070ab3ce8"
+dependencies = [
+ "autocfg",
+]
+
+[[package]]
 name = "config"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -548,6 +557,9 @@ name = "either"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e78d4f1cc4ae33bbfc157ed5d5a5ef3bc29227303d595861deb238fcec4e9457"
+dependencies = [
+ "serde 1.0.130",
+]
 
 [[package]]
 name = "encoding_rs"
@@ -1658,6 +1670,7 @@ version = "1.0.67"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a7f9e390c27c3c0ce8bc5d725f6e4d30a29d26659494aa4b17535f7522c5c950"
 dependencies = [
+ "indexmap",
  "itoa",
  "ryu",
  "serde 1.0.130",
@@ -1839,9 +1852,12 @@ dependencies = [
  "either",
  "futures",
  "heck",
+ "hex",
  "once_cell",
  "proc-macro2",
  "quote",
+ "serde 1.0.130",
+ "serde_json",
  "sha2",
  "sqlx-core",
  "sqlx-rt",
@@ -2150,6 +2166,19 @@ dependencies = [
  "pin-project-lite",
  "tracing-attributes",
  "tracing-core",
+]
+
+[[package]]
+name = "tracing-actix-web"
+version = "0.4.0-beta.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d0e529f2e4537b0f71c6bb734489680f780fcb97b7419b5500565714a641a250"
+dependencies = [
+ "actix-web",
+ "futures",
+ "tracing",
+ "tracing-futures",
+ "uuid",
 ]
 
 [[package]]
@@ -2502,6 +2531,7 @@ dependencies = [
  "actix-rt",
  "actix-web",
  "chrono",
+ "claim",
  "config",
  "log",
  "once_cell",
@@ -2510,10 +2540,12 @@ dependencies = [
  "sqlx",
  "tokio",
  "tracing",
+ "tracing-actix-web",
  "tracing-bunyan-formatter",
  "tracing-futures",
  "tracing-log",
  "tracing-subscriber",
+ "unicode-segmentation",
  "uuid",
 ]
 

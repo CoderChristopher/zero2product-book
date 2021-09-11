@@ -5,3 +5,4 @@ database:
   password: "password"
   database_name: "newsletter"
 application_port: 8000
+application_ip: "127.0.0.1"
