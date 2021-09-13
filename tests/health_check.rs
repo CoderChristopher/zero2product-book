@@ -8,6 +8,7 @@ use uuid::Uuid;
 use zero2prod::configuration::*;
 use zero2prod::startup::run;
 use zero2prod::telemetry::{get_subscriber, init_subscriber};
+use zero2prod::email_client::EmailClient;
 
 static TRACING: Lazy<()> = Lazy::new(|| {
     let default_filter_level = "debug".into();
@@ -45,14 +46,19 @@ async fn spawn_app() -> TestApp {
         }
         SocketAddr::V6(_) => {
             panic!("Expecting an ipv4 address and recieved a ipv6 address");
-            String::from("")
         }
     };
 
     configuration.database.database_name = Uuid::new_v4().to_string();
+
+	let sender_email = configuration.email_client.sender()
+		.expect("Could not parse sender email.");
+	let base_url = configuration.email_client.base_url;
+	let email_client = EmailClient::new(base_url,sender_email);
+
     let connection_pool = configure_database(&configuration.database).await;
 
-    let server = run(listener, connection_pool.clone()).expect("Failed to bind the address");
+    let server = run(listener, connection_pool.clone(),email_client).expect("Failed to bind the address");
     let _ = tokio::spawn(server);
     TestApp {
         address,
@@ -119,7 +125,6 @@ async fn subscribe_returns_a_200_for_valid_form_data() {
 async fn subscribe_returns_a_400_when_fields_are_present_but_empty() {
 	let app_address = spawn_app().await;
 	let client = reqwest::Client::new();
-	let body = "name=&email";
 
 	let test_cases = vec![
 		("name=testing&email=","Name but no email"),
